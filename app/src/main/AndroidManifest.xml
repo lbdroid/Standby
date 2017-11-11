@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="tk.rabidbeaver.standby">
 
-    <uses-permission android:name="android.permission.DEVICE_POWER"/>
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,6 +18,11 @@
         <receiver android:name=".StandbyReceiver" >
             <intent-filter>
                 <action android:name="tk.rabidbeaver.maincontroller.STANDBY"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".ACCOffReceiver" >
+            <intent-filter>
+                <action android:name="tk.rabidbeaver.maincontroller.ACC_OFF"/>
             </intent-filter>
         </receiver>
     </application>
